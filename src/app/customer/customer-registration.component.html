@@ -67,6 +67,6 @@
                 <input type="number" class="form-control" id="pin" required [(ngModel)]="customer.address.postalCode" name="customer.pincode"/>
             </div>
 
-        <button type="submit" class="btn btn-primary btn-block">Register</button>
+        <button type="submit" class="btn btn-primary btn-block" [disabled]="customerForm.form.invalid">Register</button>
     </form>
 </div>

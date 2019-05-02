@@ -5,6 +5,8 @@ import { CustomerRegistrationComponent } from './customer-registration.component
 import { RouterModule } from '@angular/router';
 import { customerRoutes } from './customer.routes';
 import {FormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { CustomerService } from './customer.service';
 
 @NgModule({
     declarations:[
@@ -14,12 +16,16 @@ import {FormsModule} from '@angular/forms';
     imports:[
         BrowserModule,
         FormsModule,
+        HttpClientModule,
         RouterModule.forChild(customerRoutes)
     ],
     exports:[
         CustomerLoginComponent,
         CustomerRegistrationComponent,
         RouterModule
+    ],
+    providers:[
+        CustomerService
     ]
 })
 export class CustomerModule{
