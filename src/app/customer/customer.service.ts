@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class CustomerService{
     constructor(private http: HttpClient) {}
 
-    baseUrl= "http://localhost:8000/";
+    baseUrl= "http://10.246.93.33:8000/";
 
     registerNewCustomer(customer: Customer):Observable<Customer>{
         return this.http.post<Customer>(this.baseUrl+"customers",customer);
